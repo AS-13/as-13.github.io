@@ -6,5 +6,25 @@
 </head>
 <body>
 	Hi!
+	<p id="para2"></p>
+	<p id="para1"></p>
+	<script type="text/javascript"> 
+		var lang = navigator.language||navigator.browserLanguage;
+		if (lang == "ru-RU"||lang == "ru") {
+			document.getElementById('para2').innerHTML = "русский";
+			document.location.href = "https://as-13.github.io/ru/ble/";
+		}
+		else{
+			if (lang == "uk-UA"||lang == "uk") {
+				document.getElementById('para2').innerHTML = "украинский";
+			document.location.href = "https://as-13.github.io/ua/ble/";
+			}
+			else{
+				document.getElementById('para2').innerHTML = "английский";
+			document.location.href = "https://as-13.github.io/en/ble/";
+			}
+		}
+		document.getElementById('para1').innerHTML = lang;
+	</script>
 </body>
 </html>

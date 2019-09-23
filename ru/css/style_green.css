@@ -10,6 +10,11 @@ html, body{margin:0;padding:0;outline:0;display:block;font-family:'Roboto', sans
 }
 @media (min-width:1200px){.container{width:1000px;}
 }
+
+.text-center {
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6, span{font-family:'Raleway', sans-serif;}
 h4{font-size:2.18rem;line-height:110%;margin:1.14rem 0 0.912rem 0;}
 p, a, li, label, input, blockquote, cite, div{font-family:'Muli', sans-serif;}

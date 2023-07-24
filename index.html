@@ -29,17 +29,101 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>portfolio_oleksandr_sevostianov</title>
+  <title>Portfolio Oleksandr Sevostianov</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      --background: #d6d6d6;
+      --color-gradient-1: #51fceb;
+      --color-gradient-2: #1caed6;
+      --color-gradient-3: #457bf7;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--background);
+    }
 
+    .loader {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: linear-gradient(
+            var(--color-gradient-1),
+            var(--color-gradient-2),
+            var(--color-gradient-3)
+        );
+        animation: animate 1.2s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loader span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+            var(--color-gradient-1),
+            var(--color-gradient-2),
+            var(--color-gradient-3)
+        );
+    }
+
+    .loader span:nth-child(1) {
+        filter: blur(10px);
+    }
+
+    .loader span:nth-child(2) {
+        filter: blur(20px);
+    }
+
+    .loader span:nth-child(3) {
+        filter: blur(40px);
+    }
+
+    .loader span:nth-child(4) {
+        filter: blur(70px);
+    }
+
+    .loader:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: var(--background);
+        border: solid white 5px;
+        border-radius: 50%;
+    }
+  </style>
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "3174029299";
+    var serviceWorkerVersion = "3854267572";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
